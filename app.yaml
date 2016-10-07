@@ -1,9 +1,6 @@
-name: gogoQing
-version: 1
+runtime: python
+vm: true
+entrypoint gunicorn -b :PORT main:app
 
-libraries:
-- name: webpy 
-  version: "0.36"
-
-- name: lxml
-  version: "2.3.4"
+runtime_config:
+	python_version: 3
